@@ -1,0 +1,177 @@
+Log Name:      Application
+Source:        BizTalk Server
+Date:          12/7/2013 1:08:51 PM
+Event ID:      5743
+Task Category: BizTalk Server
+Level:         Warning
+Keywords:      Classic
+User:          N/A
+Computer:      TPJHeary
+Description:
+The adapter failed to transmit message going to send port "BizTalkFreight_4.0.0.1_Argix.Freight.ScheduleLTLPickup_DispatchPort_653887d7669b586c" with URL "http://localhost/VS10/VS10.FreightBeta.Services/FreightSystemService.svc". It will be retransmitted after the retry interval specified for this Send Port. Details:"The remote server returned an error: (415) Cannot process the message because the content type 'text/xml; charset=UTF-8' was not the expected type 'application/soap+xml; charset=utf-8'..".
+Event Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="BizTalk Server" />
+    <EventID Qualifiers="32960">5743</EventID>
+    <Level>3</Level>
+    <Task>1</Task>
+    <Keywords>0x80000000000000</Keywords>
+    <TimeCreated SystemTime="2013-12-07T18:08:51.000000000Z" />
+    <EventRecordID>77699</EventRecordID>
+    <Channel>Application</Channel>
+    <Computer>TPJHeary</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data>BizTalkFreight_4.0.0.1_Argix.Freight.ScheduleLTLPickup_DispatchPort_653887d7669b586c</Data>
+    <Data>http://localhost/VS10/VS10.FreightBeta.Services/FreightSystemService.svc</Data>
+    <Data>The remote server returned an error: (415) Cannot process the message because the content type 'text/xml; charset=UTF-8' was not the expected type 'application/soap+xml; charset=utf-8'..</Data>
+  </EventData>
+</Event>
+
+
+Dispatch Send Port
+Deleted definition and imported FreightSystemService.BindingInfo.xml from project
+
+
+Log Name:      Application
+Source:        XLANG/s
+Date:          12/7/2013 3:29:21 PM
+Event ID:      10033
+Task Category: None
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      TPJHeary
+Description:
+xlang/s engine event log entry: Uncaught exception (see the 'inner exception' below) has suspended an instance of service 'VS10.Freight.ScheduleLTLPickup(2f94ff40-d2bd-95e6-57bc-2a2c90f5c7d4)'.
+The service instance will remain suspended until administratively resumed or terminated. 
+If resumed the instance will continue from its last persisted state and may re-throw the same unexpected exception.
+InstanceId: fe0ad79d-a06f-40b5-b0a6-0a8466cf012a
+Shape name: 
+ShapeId: 
+Exception thrown from: segment -1, progress -1
+Inner exception: Received unexpected message type 'http://www.w3.org/2003/05/soap-envelope#Fault' does not match expected type 'http://VS10.Freight#SchedulePickupRequestResponse'.
+        
+Exception type: UnexpectedMessageTypeException
+Source: Microsoft.XLANGs.Engine
+Target Site: Void VerifyMessage(Microsoft.XLANGs.Core.Envelope, System.String, Microsoft.XLANGs.Core.Context, Microsoft.XLANGs.Core.OperationInfo)
+The following is a stack trace that identifies the location where the exception occured
+
+   at Microsoft.XLANGs.Core.PortBinding.VerifyMessage(Envelope env, String typeName, Context cxt, OperationInfo op)
+   at Microsoft.BizTalk.XLANGs.BTXEngine.BTXPortBinding.VerifyMessage(Envelope env, String typeName, Context cxt, OperationInfo op)
+   at Microsoft.BizTalk.XLANGs.BTXEngine.BTXLogicalPortBinding.VerifyMessage(Envelope env, String typeName, Context cxt, OperationInfo op)
+   at Microsoft.BizTalk.XLANGs.BTXEngine.BTXPortBase.VerifyTransport(Envelope env, Int32 operationId, Context ctx)
+   at Microsoft.XLANGs.Core.Subscription.Receive(Segment s, Context ctx, Envelope& env, Boolean topOnly)
+   at Microsoft.XLANGs.Core.PortBase.GetMessageId(Subscription subscription, Segment currentSegment, Context cxt, Envelope& env, CachedObject location)
+   at VS10.Freight.ScheduleLTLPickup.segment1(StopConditions stopOn)
+   at Microsoft.XLANGs.Core.SegmentScheduler.RunASegment(Segment s, StopConditions stopCond, Exception& exp)
+
+        
+Event Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="XLANG/s" />
+    <EventID Qualifiers="0">10033</EventID>
+    <Level>2</Level>
+    <Task>0</Task>
+    <Keywords>0x80000000000000</Keywords>
+    <TimeCreated SystemTime="2013-12-07T20:29:21.000000000Z" />
+    <EventRecordID>77722</EventRecordID>
+    <Channel>Application</Channel>
+    <Computer>TPJHeary</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data>xlang/s engine event log entry: Uncaught exception (see the 'inner exception' below) has suspended an instance of service 'VS10.Freight.ScheduleLTLPickup(2f94ff40-d2bd-95e6-57bc-2a2c90f5c7d4)'.
+The service instance will remain suspended until administratively resumed or terminated. 
+If resumed the instance will continue from its last persisted state and may re-throw the same unexpected exception.
+InstanceId: fe0ad79d-a06f-40b5-b0a6-0a8466cf012a
+Shape name: 
+ShapeId: 
+Exception thrown from: segment -1, progress -1
+Inner exception: Received unexpected message type 'http://www.w3.org/2003/05/soap-envelope#Fault' does not match expected type 'http://VS10.Freight#SchedulePickupRequestResponse'.
+        
+Exception type: UnexpectedMessageTypeException
+Source: Microsoft.XLANGs.Engine
+Target Site: Void VerifyMessage(Microsoft.XLANGs.Core.Envelope, System.String, Microsoft.XLANGs.Core.Context, Microsoft.XLANGs.Core.OperationInfo)
+The following is a stack trace that identifies the location where the exception occured
+
+   at Microsoft.XLANGs.Core.PortBinding.VerifyMessage(Envelope env, String typeName, Context cxt, OperationInfo op)
+   at Microsoft.BizTalk.XLANGs.BTXEngine.BTXPortBinding.VerifyMessage(Envelope env, String typeName, Context cxt, OperationInfo op)
+   at Microsoft.BizTalk.XLANGs.BTXEngine.BTXLogicalPortBinding.VerifyMessage(Envelope env, String typeName, Context cxt, OperationInfo op)
+   at Microsoft.BizTalk.XLANGs.BTXEngine.BTXPortBase.VerifyTransport(Envelope env, Int32 operationId, Context ctx)
+   at Microsoft.XLANGs.Core.Subscription.Receive(Segment s, Context ctx, Envelope&amp; env, Boolean topOnly)
+   at Microsoft.XLANGs.Core.PortBase.GetMessageId(Subscription subscription, Segment currentSegment, Context cxt, Envelope&amp; env, CachedObject location)
+   at VS10.Freight.ScheduleLTLPickup.segment1(StopConditions stopOn)
+   at Microsoft.XLANGs.Core.SegmentScheduler.RunASegment(Segment s, StopConditions stopCond, Exception&amp; exp)
+
+        </Data>
+  </EventData>
+</Event>
+
+
+On Dispatch Send Port
+Added Inbound BizTalk message body Path /*[local-name()='Fault']/*[local-name()='Detail']/* | /*[local-name()='DispatchFault']
+
+
+Log Name:      Application
+Source:        BizTalk Server
+Date:          12/10/2013 11:22:40 AM
+Event ID:      5804
+Task Category: BizTalk Server
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      TPJHeary
+Description:
+A response message sent to adapter "WCF-WSHttp" on Receive Location: "WcfSendPort_FreightSystemService_WSHttpBinding_IDispatchSystemService" with URI:"http://localhost/VS10/VS10.FreightBeta.Services/FreightSystemService.svc" is suspended. 
+ Error details: There was a failure executing the response(receive) pipeline: "Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Source: "XML disassembler" Send Port: "WcfSendPort_FreightSystemService_WSHttpBinding_IDispatchSystemService" URI: "http://localhost/VS10/VS10.FreightBeta.Services/FreightSystemService.svc" Reason: Finding the document specification by message type "http://schemas.datacontract.org/2004/07/System.ServiceModel#ExceptionDetail" failed. Verify the schema deployed properly.   
+ MessageId:  {BA5E0D95-721F-4D8D-B4F4-C2159547E626}
+ InstanceID: {F56EF7EA-319D-4EF8-AC51-494D9C1BAD30}
+Event Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="BizTalk Server" />
+    <EventID Qualifiers="49344">5804</EventID>
+    <Level>2</Level>
+    <Task>1</Task>
+    <Keywords>0x80000000000000</Keywords>
+    <TimeCreated SystemTime="2013-12-10T16:22:40.000000000Z" />
+    <EventRecordID>78436</EventRecordID>
+    <Channel>Application</Channel>
+    <Computer>TPJHeary</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data>{BA5E0D95-721F-4D8D-B4F4-C2159547E626}</Data>
+    <Data>{F56EF7EA-319D-4EF8-AC51-494D9C1BAD30}</Data>
+    <Data>WCF-WSHttp</Data>
+    <Data>http://localhost/VS10/VS10.FreightBeta.Services/FreightSystemService.svc</Data>
+    <Data>WcfSendPort_FreightSystemService_WSHttpBinding_IDispatchSystemService</Data>
+    <Data>There was a failure executing the response(receive) pipeline: "Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Source: "XML disassembler" Send Port: "WcfSendPort_FreightSystemService_WSHttpBinding_IDispatchSystemService" URI: "http://localhost/VS10/VS10.FreightBeta.Services/FreightSystemService.svc" Reason: Finding the document specification by message type "http://schemas.datacontract.org/2004/07/System.ServiceModel#ExceptionDetail" failed. Verify the schema deployed properly.  </Data>
+  </EventData>
+</Event>
+
+Message
+<ns0:SchedulePickupRequest xmlns:ns1="http://schemas.datacontract.org/2004/07/VS10.Freight" xmlns:ns0="http://VS10.Freight" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ns0:request>
+    <ns1:Amount>1</ns1:Amount>
+    <ns1:AmountType>Pallets</ns1:AmountType>
+    <ns1:CallerName>client1</ns1:CallerName>
+    <ns1:ClientNumber>100009</ns1:ClientNumber>
+    <ns1:CreateUserID>BizTalk</ns1:CreateUserID>
+    <ns1:Created>DateTime.Now</ns1:Created>
+    <ns1:FreightType>Tsort</ns1:FreightType>
+    <ns1:IsTemplate>False</ns1:IsTemplate>
+    <ns1:LastUpdated>DateTime.Now</ns1:LastUpdated>
+    <ns1:OrderType>B</ns1:OrderType>
+    <ns1:ScheduleDate>2013-12-11T00:00:00</ns1:ScheduleDate>
+    <ns1:ShipperNumber>100010</ns1:ShipperNumber>
+    <ns1:UserID>BizTalk</ns1:UserID>
+    <ns1:Weight>100</ns1:Weight>
+    <ns1:WindowClose>1700</ns1:WindowClose>
+    <ns1:WindowOpen>900</ns1:WindowOpen>
+  </ns0:request>
+</ns0:SchedulePickupRequest>

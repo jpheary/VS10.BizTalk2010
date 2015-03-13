@@ -1,0 +1,134 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="49452a0d-7ae1-4ada-b26e-ce33b318a031">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="VS10.Customers" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="c42d15db-e4e1-49f9-8d67-8ec5f8e4da23" ParentLink="Module_PortType">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;ICRMSystemService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="ICRMSystemService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="05618eda-336f-47d7-83e5-89e47b208f9b" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;CreateIssue&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="CreateIssue" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="480f1053-b713-4ae1-b088-ef8dc3494356" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="VS10.Customers.ICRMSystemService_CreateIssue_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://VS10.Customers:ICRMSystemService_CreateIssue_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://VS10.Customers/ICRMSystemService/CreateIssue&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="8dca1fb8-50bd-481b-a174-54fa5c3fe807" ParentLink="OperationDeclaration_FaultMessageRef">
+                    <om:Property Name="Ref" Value="VS10.Customers.ICRMSystemService_CreateIssue_CustomersFaultFault_FaultMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="CustomersFaultFault" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="272bc7db-a4d8-4b96-ab0a-581cb3cdee19" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="VS10.Customers.ICRMSystemService_CreateIssue_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://VS10.Customers:ICRMSystemService_CreateIssue_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://VS10.Customers/ICRMSystemService/CreateIssueResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="959013df-2ddc-440a-97ee-2e8a1e9977ab" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;ICRMSystemService_CreateIssue_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="ICRMSystemService_CreateIssue_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="bed432dd-d4c4-4d63-8b86-5d7f4700d7b5" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="VS10.Customers.CRMSystemService_vs10_customers.CreateIssue" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="9f4ee61e-357d-48f3-841d-da39f016898a" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;ICRMSystemService_CreateIssue_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="ICRMSystemService_CreateIssue_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="8f297c8f-7ac6-4c1b-8943-582b65d63db4" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="VS10.Customers.CRMSystemService_vs10_customers.CreateIssueResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="2b187cd5-1f89-4e01-a87c-2a2e76c5bab3" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;ICRMSystemService_CreateIssue_CustomersFaultFault_FaultMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="ICRMSystemService_CreateIssue_CustomersFaultFault_FaultMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="8e79e7f5-dc57-493b-8066-4a88c2054483" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="VS10.Customers.CRMSystemService_schemas_datacontract_org_2004_07_Argix_Customers.CustomersFault" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;detail&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="detail" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="556d6c81-97ca-469c-a0ed-38d964df03ef" ParentLink="Module_ServiceDeclaration">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:service name=&quot;CRMSystemService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="CRMSystemServiceClient" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="941b365d-612b-443d-9f09-5d27cbb2087a" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module VS10.Customers
+{
+    internal messagetype ICRMSystemService_CreateIssue_InputMessage
+    {
+        body CRMSystemService_vs10_customers.CreateIssue parameters;
+    };
+    internal messagetype ICRMSystemService_CreateIssue_OutputMessage
+    {
+        body CRMSystemService_vs10_customers.CreateIssueResponse parameters;
+    };
+    internal messagetype ICRMSystemService_CreateIssue_CustomersFaultFault_FaultMessage
+    {
+        body CRMSystemService_schemas_datacontract_org_2004_07_Argix_Customers.CustomersFault detail;
+    };
+    internal porttype ICRMSystemService
+    {
+        requestresponse CreateIssue
+        {
+            ICRMSystemService_CreateIssue_InputMessage, ICRMSystemService_CreateIssue_OutputMessage, CustomersFaultFault = ICRMSystemService_CreateIssue_CustomersFaultFault_FaultMessage
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service CRMSystemServiceClient
+    {
+        body ()
+        {
+        }
+    }
+}
+

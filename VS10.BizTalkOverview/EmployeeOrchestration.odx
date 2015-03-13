@@ -1,0 +1,287 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="5467879e-588c-4a33-b049-e84c1b400329" LowerBound="1.1" HigherBound="57.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="BizTalk" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="c5d40b25-9ca4-4084-975c-7157a9904c6b" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveEmployeePortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="684573e4-9140-40ea-8821-b057b83e956f" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveEmployee" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="321191ac-fbe1-4465-8c66-d64e99635a2a" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.21">
+                    <om:Property Name="Ref" Value="BizTalk.Employee" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="334dd72f-f035-4c8c-90ce-1957a912f757" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SendExecutivePortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="f57355ac-9d49-49df-81cf-240bc745f7ca" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendExecutive" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="bcf44b60-4640-45a8-aabf-772c1cbae6d1" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.22">
+                    <om:Property Name="Ref" Value="BizTalk.Executive" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="ae669f46-8493-452e-ad95-0499b6bd74e6" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SendEmployeePortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="7a4997d4-5cb1-4375-82b4-83e2e647ac65" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendEmployee" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="f8e4ced0-989a-4357-8cd0-850b29a54b3e" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.21">
+                    <om:Property Name="Ref" Value="BizTalk.Employee" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="3225db72-96e0-4ec6-b23f-a116fb50ef07" ParentLink="Module_ServiceDeclaration" LowerBound="25.1" HigherBound="56.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="EmployeeOrchestration" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="MessageDeclaration" OID="477b1cae-abe8-4817-b7b4-15a10a521673" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="Type" Value="BizTalk.Employee" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EmployeeMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="4341b9a4-f191-4c2d-92c0-6095ea2e0632" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="Type" Value="BizTalk.Executive" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ExecutiveMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="e9cabd98-baed-4540-90dd-047c59b03662" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="aac143d9-6197-43a0-a955-a97863c76983" ParentLink="ServiceBody_Statement" LowerBound="38.1" HigherBound="40.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveEmployeePort" />
+                    <om:Property Name="MessageName" Value="EmployeeMessage" />
+                    <om:Property Name="OperationName" Value="ReceiveEmployee" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveEmployeeMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Decision" OID="92bc5307-39a1-4552-b0d4-41e216059b56" ParentLink="ServiceBody_Statement" LowerBound="40.1" HigherBound="52.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ChkEmpLvl" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="2c0f1081-748d-4b12-8d03-949f6b6a57b0" ParentLink="ReallyComplexStatement_Branch" LowerBound="41.13" HigherBound="52.1">
+                        <om:Property Name="Expression" Value="EmployeeMessage.Grade &gt; 5" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="IsExecutive" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="cb84b221-cd52-47f8-9ddf-afb310374b7b" ParentLink="ComplexStatement_Statement" LowerBound="43.1" HigherBound="49.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MakeExecutiveMessage" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="0c641b41-db7f-433d-999c-012450593df8" ParentLink="ComplexStatement_Statement" LowerBound="46.1" HigherBound="48.1">
+                                <om:Property Name="ClassName" Value="BizTalk.EmployeeToExecutiveMap" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="TransformEmployeeMessage" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="a10569d1-a106-4e75-b5f5-7a63f1efedce" ParentLink="Transform_InputMessagePartRef" LowerBound="47.84" HigherBound="47.99">
+                                    <om:Property Name="MessageRef" Value="EmployeeMessage" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="1a670969-4e10-4c17-83c7-fc06f65c3894" ParentLink="Transform_OutputMessagePartRef" LowerBound="47.32" HigherBound="47.48">
+                                    <om:Property Name="MessageRef" Value="ExecutiveMessage" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="1f0e933c-2a3f-45d8-86e1-4d4dcad3c932" ParentLink="Construct_MessageRef" LowerBound="44.27" HigherBound="44.43">
+                                <om:Property Name="Ref" Value="ExecutiveMessage" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="5a6feb70-bc06-4cc6-a487-6daa1fd27a53" ParentLink="ComplexStatement_Statement" LowerBound="49.1" HigherBound="51.1">
+                            <om:Property Name="PortName" Value="SendExecutivePort" />
+                            <om:Property Name="MessageName" Value="ExecutiveMessage" />
+                            <om:Property Name="OperationName" Value="SendExecutive" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="SendExecutiveMessage" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="c9ff98ba-7b85-483c-b862-56492e960349" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="6238326f-1198-4f91-9cbd-2cd4ab948fed" ParentLink="ServiceBody_Statement" LowerBound="52.1" HigherBound="54.1">
+                    <om:Property Name="PortName" Value="SendEmployeePort" />
+                    <om:Property Name="MessageName" Value="EmployeeMessage" />
+                    <om:Property Name="OperationName" Value="SendEmployee" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SendEmployeeMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="d25ffd52-d5b9-4635-b0dc-fede2addd133" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="28.1" HigherBound="30.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="15" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BizTalk.ReceiveEmployeePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveEmployeePort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="85551fa2-3027-435b-8bc8-977513b935ad" ParentLink="PortDeclaration_CLRAttribute" LowerBound="28.1" HigherBound="29.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="FILE" />
+                    <om:Property Name="URI" Value="c:\Unleashed\EmployeeIn\*.xml" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="9b382c4c-f55d-4844-b603-86ac21d13850" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="30.1" HigherBound="32.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="27" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BizTalk.SendExecutivePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendExecutivePort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="2b5e2f04-b26f-469e-a8c2-3a71d2a72aa8" ParentLink="PortDeclaration_CLRAttribute" LowerBound="30.1" HigherBound="31.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="FILE" />
+                    <om:Property Name="URI" Value="c:\Unleashed\ExecutiveOut\%MessageID%.xml" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="6a40c761-f850-42de-83fa-632d72111417" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="32.1" HigherBound="34.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="29" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BizTalk.SendEmployeePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendEmployeePort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="71148932-ed0c-4233-9535-cd83bea648ad" ParentLink="PortDeclaration_CLRAttribute" LowerBound="32.1" HigherBound="33.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="FILE" />
+                    <om:Property Name="URI" Value="c:\Unleashed\EmployeeOut\%MessageID%.xml" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module BizTalk
+{
+    internal porttype ReceiveEmployeePortType
+    {
+        oneway ReceiveEmployee
+        {
+            Employee
+        };
+    };
+    internal porttype SendExecutivePortType
+    {
+        oneway SendExecutive
+        {
+            Executive
+        };
+    };
+    internal porttype SendEmployeePortType
+    {
+        oneway SendEmployee
+        {
+            Employee
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service EmployeeOrchestration
+    {
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("FILE", "c:\\Unleashed\\EmployeeIn\\*.xml", typeof(Microsoft.BizTalk.DefaultPipelines.XMLReceive))]
+        port implements ReceiveEmployeePortType ReceiveEmployeePort;
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("FILE", "c:\\Unleashed\\ExecutiveOut\\%MessageID%.xml", typeof(Microsoft.BizTalk.DefaultPipelines.XMLTransmit))]
+        port uses SendExecutivePortType SendExecutivePort;
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("FILE", "c:\\Unleashed\\EmployeeOut\\%MessageID%.xml", typeof(Microsoft.BizTalk.DefaultPipelines.XMLTransmit))]
+        port uses SendEmployeePortType SendEmployeePort;
+        message Employee EmployeeMessage;
+        message Executive ExecutiveMessage;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("aac143d9-6197-43a0-a955-a97863c76983")]
+            activate receive (ReceiveEmployeePort.ReceiveEmployee, EmployeeMessage);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("92bc5307-39a1-4552-b0d4-41e216059b56")]
+            if (EmployeeMessage.Grade > 5)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("cb84b221-cd52-47f8-9ddf-afb310374b7b")]
+                construct ExecutiveMessage
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("0c641b41-db7f-433d-999c-012450593df8")]
+                    transform (ExecutiveMessage) = BizTalk.EmployeeToExecutiveMap (EmployeeMessage);
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("5a6feb70-bc06-4cc6-a487-6daa1fd27a53")]
+                send (SendExecutivePort.SendExecutive, ExecutiveMessage);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6238326f-1198-4f91-9cbd-2cd4ab948fed")]
+            send (SendEmployeePort.SendEmployee, EmployeeMessage);
+        }
+    }
+}
+

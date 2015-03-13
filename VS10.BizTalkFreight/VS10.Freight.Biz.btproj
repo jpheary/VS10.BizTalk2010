@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21107</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E7C11E1-0B1D-4860-9564-5D23386F58D5}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <GenericProcessing>true</GenericProcessing>
+    <RootNamespace>VS10</RootNamespace>
+    <AssemblyName>VS10.BizTalk.Freight</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>BizTalkFreightKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools">
+      <Name>Microsoft.BizTalk.TestTools</Name>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BaseTypes">
+      <Name>Microsoft.XLANGs.BaseTypes</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BizTalkFreightKey.snk" />
+    <Schema Include="Customers\CRMSystemService_vs10_customers.xsd">
+      <Namespace>Argix.Customers</Namespace>
+      <TypeName>CRMSystemService_argix_customers</TypeName>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Customers\CRMSystemService_schemas_datacontract_org_2004_07_VS10_Customers.xsd">
+      <Namespace>VS10.Customers</Namespace>
+      <TypeName>CRMSystemService_schemas_datacontract_org_2004_07_Argix_Customers</TypeName>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Customers\CRMSystemService_schemas_microsoft_com_2003_10_Serialization.xsd">
+      <Namespace>VS10.Customers</Namespace>
+      <TypeName>CRMSystemService_schemas_microsoft_com_2003_10_Serialization</TypeName>
+    </Schema>
+    <Schema Include="FreightSystemService_argix_freight.xsd">
+      <Namespace>VS10.Freight</Namespace>
+      <TypeName>FreightSystemService_argix_freight</TypeName>
+    </Schema>
+    <Schema Include="FreightSystemService_schemas_datacontract_org_2004_07_VS10_Freight.xsd">
+      <Namespace>VS10.Freight</Namespace>
+      <TypeName>FreightSystemService_schemas_datacontract_org_2004_07_Argix_Freight</TypeName>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="FreightSystemService_schemas_microsoft_com_2003_10_Serialization.xsd">
+      <Namespace>VS10.Freight</Namespace>
+      <TypeName>FreightSystemService_schemas_microsoft_com_2003_10_Serialization</TypeName>
+    </Schema>
+    <Schema Include="FreightProperties.xsd">
+      <TypeName>FreightProperties</TypeName>
+      <Namespace>VS10</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="ShipmentToPickupMap.btm">
+      <TypeName>ShipmentToPickupMap</TypeName>
+      <Namespace>VS10</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="LTLShipmentToCRMIssueTransform.btm">
+      <TypeName>LTLShipmentToCRMIssueTransform</TypeName>
+      <Namespace>Argix</Namespace>
+    </Map>
+    <Content Include="Customers\CRMSystemService.BindingInfo.xml" />
+    <XLang Include="Customers\CRMSystemService.odx">
+      <TypeName>CRMSystemService</TypeName>
+      <Namespace>Argix</Namespace>
+    </XLang>
+    <Content Include="Customers\CRMSystemService_Custom.BindingInfo.xml" />
+    <Content Include="FreightSystemService.BindingInfo.xml" />
+    <Map Include="PickupRequestToLTLShipmentMap.btm">
+      <TypeName>PickupRequestToLTLShipmentMap</TypeName>
+      <Namespace>VS10</Namespace>
+    </Map>
+    <Map Include="LTLShipmentToLTLShipmentRequestMap.btm">
+      <TypeName>LTLShipmentToLTLShipmentRequestMap</TypeName>
+      <Namespace>VS10</Namespace>
+    </Map>
+    <XLang Include="ScheduleLTLPickup.odx">
+      <TypeName>FreightSystemService</TypeName>
+      <Namespace>Argix</Namespace>
+    </XLang>
+    <Content Include="FreightSystemService_Custom.BindingInfo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+</Project>

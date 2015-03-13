@@ -1,0 +1,78 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VS10.BizTalkMessages", "VS10.BizTalkMessages\VS10.BizTalkMessages.btproj", "{710B490D-5657-452D-83A2-28CE49CB177C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VS10.BizTalkMessageSpecs", "VS10.BizTalkMessageSpecs\VS10.BizTalkMessageSpecs.btproj", "{74BA73B4-622E-4B91-B885-1C7CF6587DF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VS10.BizTalkOverview", "VS10.BizTalkOverview\VS10.BizTalkOverview.btproj", "{15BAC66D-8A2F-4C7F-9E86-859927DE38EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VS10.BizTalkPipelines", "VS10.BizTalkPipelines\VS10.BizTalkPipelines.btproj", "{14EB830F-B23C-4068-85C7-A294F10F1C70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4C50BD32-BDAF-47A8-9478-FB870D79E03C}"
+	ProjectSection(SolutionItems) = preProject
+		BizTalk2010 Exceptions.txt = BizTalk2010 Exceptions.txt
+		BizTalk2010 Patterns.vsdx = BizTalk2010 Patterns.vsdx
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VS10.Freight.Biz", "VS10.BizTalkFreight\VS10.Freight.Biz.btproj", "{1E7C11E1-0B1D-4860-9564-5D23386F58D5}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VS10.BizTalkWebClient", "http://localhost:55455", "{EA3AADF0-8E06-40ED-BA13-24E44A1F4D96}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55455"
+		Debug.AspNetCompiler.PhysicalPath = "VS10.BizTalkWebClient\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55455\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55455"
+		Release.AspNetCompiler.PhysicalPath = "VS10.BizTalkWebClient\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55455\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "VS10.BizTalkWebClient\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{710B490D-5657-452D-83A2-28CE49CB177C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710B490D-5657-452D-83A2-28CE49CB177C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710B490D-5657-452D-83A2-28CE49CB177C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710B490D-5657-452D-83A2-28CE49CB177C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74BA73B4-622E-4B91-B885-1C7CF6587DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74BA73B4-622E-4B91-B885-1C7CF6587DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74BA73B4-622E-4B91-B885-1C7CF6587DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74BA73B4-622E-4B91-B885-1C7CF6587DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15BAC66D-8A2F-4C7F-9E86-859927DE38EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15BAC66D-8A2F-4C7F-9E86-859927DE38EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15BAC66D-8A2F-4C7F-9E86-859927DE38EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15BAC66D-8A2F-4C7F-9E86-859927DE38EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14EB830F-B23C-4068-85C7-A294F10F1C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14EB830F-B23C-4068-85C7-A294F10F1C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14EB830F-B23C-4068-85C7-A294F10F1C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14EB830F-B23C-4068-85C7-A294F10F1C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E7C11E1-0B1D-4860-9564-5D23386F58D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E7C11E1-0B1D-4860-9564-5D23386F58D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E7C11E1-0B1D-4860-9564-5D23386F58D5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1E7C11E1-0B1D-4860-9564-5D23386F58D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E7C11E1-0B1D-4860-9564-5D23386F58D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E7C11E1-0B1D-4860-9564-5D23386F58D5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EA3AADF0-8E06-40ED-BA13-24E44A1F4D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3AADF0-8E06-40ED-BA13-24E44A1F4D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3AADF0-8E06-40ED-BA13-24E44A1F4D96}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3AADF0-8E06-40ED-BA13-24E44A1F4D96}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
